@@ -47,6 +47,7 @@ const Navbar = (props) => {
               </Link>
             </li>
           )}
+<<<<<<< HEAD
           <li className="nav-item">
             <a
               className="nav-link lead"
@@ -76,6 +77,49 @@ const Navbar = (props) => {
         </ul>
       </div>
     </nav>
+=======
+		  
+		  
+          <Nav.Link
+            className="nav-link lead"
+            href={process.env.PUBLIC_URL + "/#experience"}
+          >
+            Career
+          </Nav.Link>
+		  
+		  {/*
+		  <Nav.Link
+            className="nav-link lead"
+            href={process.env.PUBLIC_URL + "/#projecttimeline"}
+          >
+            Projects
+          </Nav.Link>*/}
+		  
+		  
+          <Nav.Link
+            className="nav-link lead"
+            href={Pdf}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Resume
+          </Nav.Link>
+          <Nav.Link
+            className="nav-link lead"
+            href={process.env.PUBLIC_URL + "/#aboutme"}
+          >
+            About
+          </Nav.Link>
+          <Nav.Link
+            className="nav-link lead"
+            href={process.env.PUBLIC_URL + "/#skills"}
+          >
+            Skills
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+>>>>>>> 5139c6b... timeline
   );
 };
 

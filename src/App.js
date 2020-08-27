@@ -9,6 +9,8 @@ import {
 } from "./editable-stuff/configurations.json";
 import MainBody from "./components/home/MainBody";
 import AboutMe from "./components/home/AboutMe";
+import ProjectTimeline from "./editable-stuff/ProjectTimeline"; 
+import Experience from "./editable-stuff/Experience";
 import Project from "./components/home/Project";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -20,8 +22,34 @@ const Home = () => {
     <Fragment>
       <MainBody />
       <AboutMe />
+<<<<<<< HEAD
       <Project />
     </Fragment>
+=======
+	  {/*<ProjectTimeline />*/}
+	  {showSkills && <Skills />}
+	  {/*<Project />*/}
+      <Experience />
+	 
+      
+    </>
+  );
+});
+
+const App = () => {
+  const titleRef = React.useRef();
+
+  return (
+    <ConfigProvider avatarRedirectUrl={avatarRedirectUrl}>
+      <BrowserRouter basename={process.env.PUBLIC_URL + "/"}>
+        {showNavigationbar && <Navbar ref={titleRef} />}
+        <Route path="/" exact component={() => <Home ref={titleRef} />} />
+        {showBlog && <Route path="/blog" exact component={Blog} />}
+        {showBlog && <Route path="/blog/:id" component={BlogPost} />}
+        <Footer />
+      </BrowserRouter>
+    </ConfigProvider>
+>>>>>>> 5139c6b... timeline
   );
 };
 
